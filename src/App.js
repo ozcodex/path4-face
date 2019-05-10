@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Background from './Background.jsx'
 
 function App() {
   return (
     <div className="App">
+      <Background />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Path4 says "Hello world"
         </p>

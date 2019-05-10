@@ -1,3 +1,7 @@
+html {
+  height:100%;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +13,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,8 +22,13 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Background {
+  background-color: #282c34;
+  position: absolute;
+  overflow: hidden;
+  height:100%;
+  z-index: -1;
+  text-align: justify;
 }
 
 @keyframes App-logo-spin {
