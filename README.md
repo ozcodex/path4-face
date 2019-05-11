@@ -1,3 +1,19 @@
+#DPS Engineering First Challenge
+
+This is the first challenge to software Engineers in the Digital Product School
+
+### Instuctions:
+
+1. Create a React App that displays Hello World in the browser.
+2. Put it on Github.
+3. Deploy the App via Google Cloud.
+4. Create a Pull Request that does the following: when a user clicks Hello World, it should change to Hello Nerds.
+5. Do a Code Review & Merge the Pull Request after Approval.
+6. Redeploy the App.
+7. Bonus: Can you combine 5 & 6 in a single step?
+
+## React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
