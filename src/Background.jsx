@@ -40,7 +40,7 @@ class Background extends React.Component {
   }
 
   componentDidMount(){
-    this.GenText(1000);
+    this.GenText(3000);
   }
 
   render(){
