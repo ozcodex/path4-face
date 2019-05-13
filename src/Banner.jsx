@@ -4,15 +4,22 @@ class Banner extends React.Component {
 
   constructor(props){
     super(props);
-    this.new_text = "Hello Nerds";
+    this.alternate_text = "Hello Nerds";
+    this.initial_text = "Hello World";
     this.state = {
-    text : "Hello World"
+      initial : true,
+      text: this.initial_text
     }
     this.changeTitle = this.changeTitle.bind(this);
   }
 
   changeTitle(){
-    this.setState({text: this.new_text });
+    //i negate the initial flag to get the "next" value and show the proper text
+    var new_text = !this.state.initial ? this.initial_text : this.alternate_text;
+    this.setState({
+      text: new_text, 
+      initial: !this.state.initial
+    });
   };
 
   render(){
