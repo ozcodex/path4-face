@@ -11,7 +11,12 @@ class Background extends React.Component {
       "Saluton Mondon", //Esperanto
       "Hallo Welt", //German
       "Salam Donya",  //Farsi/Urdu
-      "Hello World" 
+      "سلام دنيا",//Farsi/Urdu
+      "Hello World" ,// English 
+      "Nihao,Shijie",//Pinyin, Chinese 
+      "你好,世界"// Chinese 
+      
+    
     ];
     this.state = {
     text : ""
@@ -23,7 +28,7 @@ class Background extends React.Component {
     let last_pos = 0;
     let random_pos = 0;
     for(let i = times; i > 0; i--){
-      while (random_pos == last_pos){
+      while (random_pos === last_pos){
         random_pos = Math.floor(Math.random() * this.words.length);
       }
       last_pos = random_pos;
