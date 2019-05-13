@@ -18,7 +18,7 @@ class Banner extends React.Component {
   render(){
     return (
       <p className="Banner">
-        Path4 Team says: <a onClick={this.changeTitle}>{this.state.text}</a>
+        Path4 Team says: <span onClick={this.changeTitle}>{this.state.text}</span>
       </p>
     );
   }
