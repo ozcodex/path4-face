@@ -1,9 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-- name: "gcr.io/cloud-builders/npm"
-  args: ["run", "build"]
-- name: "ubuntu"
-  args: ["rm","cloudbuild.yaml"]
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app","deploy","app-master.yaml"]
