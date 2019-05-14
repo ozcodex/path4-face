@@ -3,9 +3,8 @@
 # CMD ["/quickstart.sh"]
 
 
-RUN npm install
-RUN npm run build
-
+# RUN npm install
+# RUN npm run build
 
 # Base image
 FROM node:alpine
