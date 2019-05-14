@@ -9,7 +9,10 @@ steps:
   args: ["push", "gcr.io/$PROJECT_ID/image:$REVISION_ID"]
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
-  - 'set'
-  - 'image'
-  - 'deployment/my-deployment'
-  - 'my-container=gcr.io/$PROJECT_ID/image:$REVISION_ID'
+    - 'set'
+    - 'image'
+    - 'deployment/my-deployment'
+    - 'my-container=gcr.io/$PROJECT_ID/image:$REVISION_ID'
+  env:
+    - 'CLOUDSDK_COMPUTE_ZONE=$_CLUSTER_ZONE'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=$_CLUSTER_NAME'
