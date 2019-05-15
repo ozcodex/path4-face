@@ -11,7 +11,7 @@ steps:
   args:
     - 'set'
     - 'image'
-    - 'deployment/my-deployment'
+    - 'deployment/server'
     - 'my-container=gcr.io/$PROJECT_ID/image:$REVISION_ID'
   env:
     - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-c'
