@@ -12,7 +12,7 @@ steps:
     - 'set'
     - 'image'
     - 'deployment/server'
-    - 'my-container=gcr.io/$PROJECT_ID/image:$REVISION_ID'
+    - 'server=gcr.io/$PROJECT_ID/image:$REVISION_ID'
   env:
     - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-c'
     - 'CLOUDSDK_CONTAINER_CLUSTER=test-cluster-2'
