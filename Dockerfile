@@ -3,7 +3,7 @@
 # CMD ["/quickstart.sh"]
 
 
-RUN npm install
+# RUN npm install
 # RUN npm run build
 
 # Base image
@@ -15,4 +15,6 @@ WORKDIR /app
 COPY package.json /app/package.json
 RUN npm install --production
 EXPOSE 8080
+RUN npm run build
 CMD npm  start
+
