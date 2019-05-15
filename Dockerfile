@@ -1,20 +1,17 @@
-# FROM alpine
-# COPY quickstart.sh /
-# CMD ["/quickstart.sh"]
+FROM node:8-wheezy
 
+ARG buildtime_variable=staging
+ENV NODE_ENV=$buildtime_variable
 
-# RUN npm install
-# RUN npm run build
+RUN mkdir -p /usr/src/app
 
-# Base image
-FROM node:alpine
-# Create app directory
-RUN mkdir -p /app
-WORKDIR /app
-# Install app dependencies
-COPY package.json /app/package.json
-RUN npm install --production
-EXPOSE 8080
-RUN npm run build
-CMD npm  start
+WORKDIR /usr/src/app
 
+COPY . /usr/src/app
+
+RUN npm install
+
+EXPOSE 3000
+
+#Run the application.
+CMD npm start
