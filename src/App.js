@@ -1,17 +1,12 @@
 import React from 'react';
-import './App.css';
-import Background from './Background.jsx'
-import Banner from './Banner.jsx'
+import {view as TopMenu} from './TopMenu';
 
-function App() {
-  return (
-    <div className="App">
-      <Background />
-      <header className="App-header">
-        <Banner />
-      </header>
-    </div>
-  );
+const App=({children})=>{
+    return (
+        <div>
+            <TopMenu />
+            <div>{children}</div>
+        </div>
+    )
 }
-
 export default App;
