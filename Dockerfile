@@ -3,7 +3,7 @@
 # CMD ["/quickstart.sh"]
 
 
-# RUN npm install
+RUN npm install
 # RUN npm run build
 
 # Base image
