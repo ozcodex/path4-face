@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-FROM launcher.gcr.io/google/nodejs
-
-
-RUN npm install
-# RUN npm run build
-
-# Base image
-FROM node:alpine
-# Create app directory
-RUN mkdir -p /app
-WORKDIR /app
-# Install app dependencies
-COPY package.json /app/package.json
-RUN npm install --production
-EXPOSE 8080
-CMD npm  start
-=======
 # Dockerfile extending the generic Node image with application files for a
 # single application.
 FROM gcr.io/google_appengine/nodejs
@@ -32,4 +14,3 @@ RUN npm install --unsafe-perm || \
       cat npm-debug.log; \
     fi) && false)
 CMD npm start
->>>>>>> 5cc93240bfbfd8b900e468682a5083597f0991dc
