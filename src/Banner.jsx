@@ -5,7 +5,7 @@ class Banner extends React.Component {
   constructor(props){
     super(props);
     this.alternate_text = "Hello Nerds";
-    this.initial_text = "Hello World !!!";
+    this.initial_text = "Hello World";
     this.state = {
       initial : true,
       text: this.initial_text
