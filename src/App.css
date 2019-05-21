@@ -21,8 +21,11 @@ html {
 }
 
 .Banner{
-  margin-top: calc(38vmin);
   text-align: center;
   font-size: calc(10px + 4vmin);
   color: white;
 }
+
+.Logo{
+  background-color: white;
+}  

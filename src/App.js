@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import './App.css';
+import './Logo.css';
 
 class App extends Component {
   render() {
