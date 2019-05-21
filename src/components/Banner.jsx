@@ -24,7 +24,7 @@ class Banner extends React.Component {
 
   render(){
     return (
-      <p className="Banner">
+      <p className="Banner unselectable">
         Path4 Team says: <span onClick={this.changeTitle}>{this.state.text}</span>
       </p>
     );

@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
 import lu from '../assets/lu.jpg'; 
 
 class About extends Component {
   render() {
     return (
         <div>
-          <h2>About</h2>
-        
-        
-        <h1>Meet the Team Datum!</h1>
-
         
         <div id="container">
   

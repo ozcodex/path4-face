@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 class Background extends React.Component {
 
@@ -45,7 +44,7 @@ class Background extends React.Component {
 
   render(){
     return (
-      <div className="Background">
+      <div className="Background unselectable">
         {this.state.text}
       </div>
     );
