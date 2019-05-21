@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
+import {Col,Row } from 'react-bootstrap';
 import lu from '../assets/lu.jpg'; 
 import oscar from '../assets/oscar.jpg'; 
 import henrik from '../assets/henrik.jpg'; 
@@ -8,12 +9,14 @@ import farnaz from '../assets/farnaz.jpg';
 class Members extends Component {
   render() {
     return (
-        <div className="row">
-          <Carousel className="col-6 offset-3">
+      <Row>
+        <Col className="col-6 offset-3">
+          <Carousel>
             <Carousel.Item>
               <img
                 className="d-block w-100 rounded-circle"
                 src={lu}
+                alt=""
               />
               <Carousel.Caption>
                 <p>Lu</p>
@@ -23,6 +26,7 @@ class Members extends Component {
               <img
                 className="d-block w-100 rounded-circle"
                 src={oscar}
+                alt=""
               />
 
               <Carousel.Caption>
@@ -33,6 +37,7 @@ class Members extends Component {
               <img
                 className="d-block w-100 rounded-circle"
                 src={henrik}
+                alt=""
               />
 
               <Carousel.Caption>
@@ -43,6 +48,7 @@ class Members extends Component {
               <img
                 className="d-block w-100 rounded-circle"
                 src={farnaz}
+                alt=""
               />
 
               <Carousel.Caption>
@@ -50,7 +56,8 @@ class Members extends Component {
               </Carousel.Caption>
             </Carousel.Item> 
           </Carousel>
-        </div>
+        </Col>
+      </Row>
     );
   }
 }

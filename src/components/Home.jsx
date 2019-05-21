@@ -11,7 +11,15 @@ class Home extends Component {
         <div>
           <Background />
           <Container>
-            <Logo />
+            <Row>
+              <Col className="p-2">
+              </Col>
+            </Row>
+            <Row>
+              <Col className="text-center">
+                <Logo />
+              </Col>
+            </Row>
             <Banner />
           </Container>
         </div>

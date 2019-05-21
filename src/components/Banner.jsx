@@ -1,4 +1,5 @@
 import React from 'react';
+import {Col,Row } from 'react-bootstrap';
 
 class Banner extends React.Component {
 
@@ -24,9 +25,11 @@ class Banner extends React.Component {
 
   render(){
     return (
-      <p className="Banner unselectable">
+      <Row>
+        <Col className="Banner text-center unselectable">
         Path4 Team says: <span onClick={this.changeTitle}>{this.state.text}</span>
-      </p>
+        </Col>
+      </Row>
     );
   }
 

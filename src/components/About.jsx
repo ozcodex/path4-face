@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
+import { Container,Col,Row } from 'react-bootstrap';
 import Members from './Members.jsx'
 import Background from './Background.jsx'
-import lu from '../assets/lu.jpg'; 
 
 class About extends Component {
   render() {
     return (
       <div>
         <Background />
-        <div className="container">
-          <div className="row">
-            <div className="col p-3">
-            </div>
-          </div>
+        <Container>
+          <Row>
+            <Col className="p-3">
+            </Col>
+          </Row>
           <Members /> 
-        </div>
+        </Container>
       </div>
     );
   }
