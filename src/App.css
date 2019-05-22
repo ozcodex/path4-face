@@ -27,4 +27,9 @@ html {
 
 .Logo{
   background-color: white;
+}
+
+.black_square{
+  color: white;
+  background-color: black;
 }  
