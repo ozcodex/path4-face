@@ -15,26 +15,32 @@ class Members extends Component {
     this.members = [
       {
         name: "Lu Zheng",
+        role: "[AI]", 
         pic: lu
       },
       {
         name: "Oscar Bernal",
+        role:"[SE]", 
         pic: oscar
       },
       {
         name: "Henrik Bredenbals",
+        role:"[PM]", 
         pic: henrik
       },
       {
         name: "Farnaz",
+        role:"[IxD]", 
         pic: farnaz
       },
       {
         name: "Bernd Weschenbach",
+        role:"[IxD]", 
         pic: bernd
       },
       {
         name: "Faizan",
+        role:"[AI]", 
         pic: faizan
       }      
     ]
@@ -53,7 +59,7 @@ class Members extends Component {
         src: element.pic,
         alt: element.name
       });
-      let span = React.createElement('span',{className:'black_square'},element.name);
+      let span = React.createElement('span',{className:'black_square p-1'},element.role+' '+element.name);
       let paragraph = React.createElement('p',props,span);
       let caption = React.createElement(Carousel.Caption,{key: 'caption'+i},paragraph);      
       let item = React.createElement(Carousel.Item,{key: 'item'+i},[image,caption]);
