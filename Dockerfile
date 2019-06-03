@@ -2,6 +2,8 @@
 # single application.
 FROM gcr.io/google_appengine/nodejs
 COPY . /app/
+
+EXPOSE 4242/tcp
 # You have to specify "--unsafe-perm" with npm install
 # when running as root.  Failing to do this can cause
 # install to appear to succeed even if a preinstall

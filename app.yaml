@@ -1,7 +1,9 @@
 # [START runtime]
 runtime: custom 
 env: flex
+# [END runtime]
 
+# [START resources]
 resources:
   cpu: 1
   memory_gb: 0.5
@@ -9,7 +11,13 @@ resources:
 
 automatic_scaling:
   max_num_instances: 1
-# [END runtime]
+# [END resources]
+
+# [START network]
+network:
+  forwarded_ports:
+    - 4242/tcp
+# [END network]
 
 # [START handlers]
 handlers:
