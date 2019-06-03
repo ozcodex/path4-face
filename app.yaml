@@ -1,6 +1,7 @@
 # [START runtime]
-runtime: custom 
+runtime: nodejs 
 env: flex
+service: face
 # [END runtime]
 
 # [START resources]
@@ -12,12 +13,6 @@ resources:
 automatic_scaling:
   max_num_instances: 1
 # [END resources]
-
-# [START network]
-network:
-  forwarded_ports:
-    - 4242/tcp
-# [END network]
 
 # [START handlers]
 handlers:

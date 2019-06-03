@@ -4,5 +4,5 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['test']
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy","--version=testing","--no-promote"]
+  args: ["app", "deploy","--version=production"]
 timeout: 1200s
