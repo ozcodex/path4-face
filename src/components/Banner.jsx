@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col,Row } from 'react-bootstrap';
 
-const API = 'http://localhost:4242/';
+const API = 'http://brain-dot-project-path4.appspot.com/';
 
 class Banner extends React.Component {
 
@@ -10,28 +10,29 @@ class Banner extends React.Component {
     this.alternate_text = "Hello World";
     this.initial_text = "Hello World";
     this.state = {
-      initial : true,
       text: this.initial_text
     }
     this.changeTitle = this.changeTitle.bind(this);
-    this.getWord();
-  }
-
-  getWord(){
-    fetch(API + 'hello')
-      .then(response => response.json())
-      .then(data => {
-        this.alternate_text = data.message
-      });
   }
 
   changeTitle(){
-    //i negate the initial flag to get the "next" value and show the proper text
-    var new_text = !this.state.initial ? this.initial_text : this.alternate_text;
-    this.setState({
-      text: new_text, 
-      initial: !this.state.initial
-    });
+    fetch(API + 'random')
+      .then(response => response.json())
+      .then(async (data) => {
+        let new_text = data.text
+        while(this.state.text === new_text){
+          let response = await fetch(API + 'random')
+          let new_data = await response.json
+          new_text = new_data.text
+        }
+        if (new_text){
+          this.setState({
+            text: new_text 
+          });
+        }else{
+          this.changeTitle();
+        }
+      });
   };
 
   render(){
