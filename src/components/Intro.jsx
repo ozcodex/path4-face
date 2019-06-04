@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Container,Col,Row } from 'react-bootstrap';
+import { Container,Col,Row,Image } from 'react-bootstrap';
 import Background from './Background.jsx'
-import Introduction from './Introduction.jsx'
 
-
+import crossing from '../assets/crossing.png'
 
 class  Intro extends Component {
     render() {
@@ -12,9 +11,22 @@ class  Intro extends Component {
           <Background />
           <Container>
             <Row>
-              <Col className="p-3">
+              <Col sm={{span: 3, offset:5}}>
+                <Image src={crossing} rounded fluid />
               </Col>
-              <Introduction/>
+            </Row>
+            <Row>
+              <Col className='p-3'></Col>
+            </Row>
+            <Row>
+              <Col className="Banner text-center">
+                Path 4: There are 4 directions when we stand at a crossing,so we could use path4 to choose a good direction.
+              </Col>
+            </Row>
+            <Row>
+              <Col className="Banner text-center">
+                Also, we want to provide you with the best public transportation app experience by suggesting the best way(Path) for(4) you.
+              </Col>
             </Row>
           </Container>
         </div>

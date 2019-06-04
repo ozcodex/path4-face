@@ -33,3 +33,9 @@ html {
   color: white;
   background-color: black;
 }  
+
+.Info{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
