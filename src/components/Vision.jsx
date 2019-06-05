@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image,Col,Row,Container} from 'react-bootstrap';
 import Background from './Background.jsx';
+import Graph from './Graph.jsx';
 const converter = require('number-to-words');
 const firebase = require('../firebase.js');
 const db = firebase.db;
@@ -62,10 +63,10 @@ class Vision extends React.Component {
             <Col className='p-3'></Col>
           </Row>
           <Row>
-            <Col md={{span:5, offset:1}}>
+            <Col sm={12} md={{span:5, offset:1}}>
               <Image fluid rounded src={this.state.image} />
             </Col>
-            <Col md={{span:4, offset:1}} className="Banner text-center">
+            <Col sm={12} md={{span:4, offset:1}} className="Banner text-center">
               <Row>
                 <Col>Picture taken the {this.state.date} at {this.state.time} </Col>
               </Row>
@@ -77,10 +78,9 @@ class Vision extends React.Component {
           <Row>
             <Col className='p-3'></Col>
           </Row>
+          <Graph />
           <Row>
-            <Col className="Banner text-center">
-              Coming soon: Historical Data
-            </Col>
+            <Col className='p-3'></Col>
           </Row>
         </Container>
       </div>
