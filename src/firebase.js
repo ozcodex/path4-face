@@ -1,3 +1,4 @@
+const storage = require('firebase/storage');
 const firebase = require('firebase/app');
 const firestore = require('firebase/firestore');
 const noop = ()=>{};
@@ -15,7 +16,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 noop(firestore)
+noop(storage)
 
 const db = firebase.firestore();
+const files = firebase.storage();
 
-module.exports = db;
+module.exports = {db, files};
