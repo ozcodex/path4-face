@@ -2,6 +2,7 @@ import React from 'react';
 import {Image,Col,Row,Container} from 'react-bootstrap';
 import Background from './Background.jsx';
 import Graph from './Graph.jsx';
+import loading from '../assets/loading.gif';
 const converter = require('number-to-words');
 const firebase = require('../firebase.js');
 const db = firebase.db;
@@ -14,10 +15,11 @@ class Vision extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      image: '',
+      image: loading,
       time: '',
       date: '',
-      counter:0
+      counter:'zero',
+      loading:true
     }
     this.watchData = this.watchData.bind(this);
   }
@@ -41,7 +43,8 @@ class Vision extends React.Component {
               image:url,
               date:date,
               time:time,
-              counter:counter_words
+              counter:counter_words,
+              loading:false
             });
           });
       } 
@@ -68,10 +71,10 @@ class Vision extends React.Component {
             </Col>
             <Col sm={12} md={{span:4, offset:1}} className="Banner text-center">
               <Row>
-                <Col>Picture taken the {this.state.date} at {this.state.time} </Col>
+                <Col>Picture taken at {this.state.date} {this.state.time} </Col>
               </Row>
               <Row>
-                <Col>There are {this.state.counter} people on the picture</Col>
+                <Col>There {this.state.counter === 'one'? 'is':'are'} {this.state.counter} {this.state.counter === 'one'? 'person':'people'} in this picture</Col>
               </Row>
             </Col>
           </Row>
