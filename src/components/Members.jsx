@@ -71,7 +71,7 @@ class Members extends Component {
   render() {
     return (
       <Row>
-        <Col className="col-6 offset-3">
+        <Col className="col-md-4 offset-md-4 col-xs-10 offset-xs-1 ">
           {this.carousel}
         </Col>
       </Row>

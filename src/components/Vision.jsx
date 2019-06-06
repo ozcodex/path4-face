@@ -65,7 +65,7 @@ class Vision extends React.Component {
           </Row>
           <Row>
             <Col sm={12} md={{span:5, offset:1}}>
-              <Image fluid rounded src={this.state.image} />
+              <Image fluid rounded className='mx-auto d-block' src={this.state.image} />
             </Col>
             <Col sm={12} md={{span:4, offset:1}} className="Vision text-center">
               <Row>

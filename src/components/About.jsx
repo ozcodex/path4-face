@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container,Col,Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Members from './Members.jsx'
 
 class About extends Component {
@@ -7,10 +7,6 @@ class About extends Component {
     return (
       <div>
         <Container>
-          <Row>
-            <Col className="p-3">
-            </Col>
-          </Row>
           <Members /> 
         </Container>
       </div>

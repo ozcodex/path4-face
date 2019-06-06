@@ -9,7 +9,7 @@ class  Intro extends Component {
         <div>
           <Container>
             <Row>
-              <Col sm={{span: 3, offset:5}}>
+              <Col sm={{span: 2, offset:5}} xs={{span:6, offset:3  }}>
                 <Image src={crossing} rounded fluid />
               </Col>
             </Row>

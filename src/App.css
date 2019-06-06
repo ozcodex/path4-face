@@ -44,3 +44,25 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: #6262a0
+}
+
+.navbar {
+  position: absolute;
+  background-color: white;
+  z-index: 1200;
+  width: 100%;
+}
+@media only screen and (max-width: 991px){
+  .navbar{
+    -moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    padding: 0 !important;
+  }
+  #space{
+  display: none;
+}
+}
