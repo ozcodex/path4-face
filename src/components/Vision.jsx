@@ -67,7 +67,7 @@ class Vision extends React.Component {
             <Col sm={12} md={{span:5, offset:1}}>
               <Image fluid rounded src={this.state.image} />
             </Col>
-            <Col sm={12} md={{span:4, offset:1}} className="Banner text-center">
+            <Col sm={12} md={{span:4, offset:1}} className="Vision text-center">
               <Row>
                 <Col>Picture taken at {this.state.date} {this.state.time} </Col>
               </Row>

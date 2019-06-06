@@ -38,7 +38,7 @@ class Banner extends React.Component {
   render(){
     return (
       <Row>
-        <Col className="Banner text-center unselectable">
+        <Col className="Banner text-center align-middle unselectable">
         Path4 Team says: <span onClick={this.changeTitle}>{this.state.text}</span>
         </Col>
       </Row>

@@ -16,18 +16,21 @@ class App extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav className="ml-auto">
+              <Nav.Link as={Link} to="/" >Home</Nav.Link>
               <Nav.Link as={Link} to="/intro" >Intro</Nav.Link>
               <Nav.Link as={Link} to="/about" >About</Nav.Link>
               <Nav.Link as={Link} to="/vision" >Vision</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/intro' component = {Intro}/>
-          <Route path='/vision' component = {Vision}/>
-        </Switch>
+        <div className='content py-5'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/intro' component = {Intro}/>
+            <Route path='/vision' component = {Vision}/>
+          </Switch>
+        </div>
       </Router>
     );
   }

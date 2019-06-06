@@ -1,3 +1,7 @@
+html {
+  height: 100vh;
+}
+
 .unselectable {
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
@@ -7,6 +11,7 @@
 
 .Banner{
   font-size: calc(10px + 4vmin);
+  height: 70vh;
 }
 
 .black_square{
@@ -20,10 +25,22 @@
 }  
 
 .Info{
-  font-weight: bold;
-  font-size: 40px;
+  /*font-weight: bold;*/
+  font-size: calc(10px + 3vmin);
+}
+
+.Vision{
+  font-size: calc(10px + 3vmin);
 }
 
 .logo{
   height: 30px !important
+}
+
+.content{
+  height: 100%;
+  background-position: right bottom;
+  background-image: url(./assets/bg-2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
