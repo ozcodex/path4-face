@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container,Col,Row,Image } from 'react-bootstrap';
-import Background from './Background.jsx'
 
 import crossing from '../assets/crossing.png'
 
@@ -8,7 +7,6 @@ class  Intro extends Component {
     render() {
       return (
         <div>
-          <Background />
           <Container>
             <Row>
               <Col sm={{span: 3, offset:5}}>

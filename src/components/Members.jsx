@@ -59,13 +59,13 @@ class Members extends Component {
         src: element.pic,
         alt: element.name
       });
-      let span = React.createElement('span',{className:'black_square p-1'},element.role+' '+element.name);
+      let span = React.createElement('span',{className:'white_square p-1'},element.role+' '+element.name);
       let paragraph = React.createElement('p',props,span);
       let caption = React.createElement(Carousel.Caption,{key: 'caption'+i},paragraph);      
       let item = React.createElement(Carousel.Item,{key: 'item'+i},[image,caption]);
       car_items.push(item);
     });
-    return React.createElement(Carousel,props,car_items);
+    return React.createElement(Carousel,{fade:true, indicators:false},car_items);
   }
 
   render() {

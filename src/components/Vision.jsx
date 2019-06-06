@@ -1,6 +1,5 @@
 import React from 'react';
 import {Image,Col,Row,Container} from 'react-bootstrap';
-import Background from './Background.jsx';
 import Graph from './Graph.jsx';
 import loading from '../assets/loading.gif';
 const converter = require('number-to-words');
@@ -60,7 +59,6 @@ class Vision extends React.Component {
   render(){
     return (
       <div>
-        <Background />
         <Container>
           <Row>
             <Col className='p-3'></Col>
