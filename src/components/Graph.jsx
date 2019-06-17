@@ -2,14 +2,16 @@ import React from 'react';
 import {Col,Row } from 'react-bootstrap';
 import { Line } from 'react-chartjs-2';
 
+const API = 'http://brain-dot-project-path4.appspot.com/';
+
 class Graph extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {} 
-    const line_color = 'rgba(75,192,192,1)' 
+    const line_color = 'rgba(75,192,192,1)'
     this.data = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: [],
       datasets: [{
         label: 'Person Counter',
         fill: false,
@@ -29,7 +31,7 @@ class Graph extends React.Component {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
+        data: []
       }]
 		  }
     this.options = {
@@ -37,6 +39,16 @@ class Graph extends React.Component {
         display: false,
       },
     }
+    this.updateInfo();
+  }
+
+  updateInfo(){
+    fetch(API + 'data')
+      .then(response => response.json())
+      .then((data) => {
+        this.data.labels = data.label;  
+        this.data.datasets[0].data = data.data;
+      })
   }
 
   render(){

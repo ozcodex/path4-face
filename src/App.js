@@ -28,9 +28,6 @@ class App extends Component {
               <NavItem href='/about'>
                 <Nav.Link as={Link} to="/about" eventKey="about" className='p-2'>About</Nav.Link>
               </NavItem>
-              <NavItem href='/about'>
-                <Nav.Link as={Link} to="/vision" eventKey="vision" className='p-2'>Vision</Nav.Link>
-              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -38,10 +35,9 @@ class App extends Component {
         <div id='space' className='p-3'></div>
         <div className='content py-5'>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={Vision} />
             <Route path='/about' component={About} />
             <Route path='/intro' component = {Intro}/>
-            <Route path='/vision' component = {Vision}/>
           </Switch>
         </div>
       </Router>
